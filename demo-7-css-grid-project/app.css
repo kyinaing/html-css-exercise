@@ -1,0 +1,313 @@
+.body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.navbar {
+    padding: 64px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: bold;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .artist {
+    background-color: white;
+    border-radius: 8px;
+    font-size: 8px;
+    text-transform: uppercase;
+    width: 50px;
+    padding: 4px;
+    margin: 16px;
+    text-align: center;
+    /* box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.2); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, 
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.navbar .right {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+
+}
+
+.mobileNav {
+    width: 80px;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    padding: 16px;
+    top: 0;
+    right: -160px;
+    transition: transform 0.3s;
+}
+
+.openDrawer {
+    transform: translateX(-160px)
+}
+
+.mobileNav img {
+    width: 24px;
+    height: 24px;
+}
+
+.mobileNav a {
+    text-decoration: none;
+    color: black;
+    margin: 16px 0;
+}
+
+.mobileNav a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 64px;
+}
+
+.bar1, .bar2, .bar3 {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.project {
+    /* width: 300px; */
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.project .overlay {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project .overlay:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.project .overlay.white {
+    color: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-areas:
+        "eth eth alphabet"
+        "eth eth traveler"
+        "astro cube traveler"
+        "cup insta insta"
+        "cup insta insta"
+        "foam foam dimensional"
+        "foam foam dimensional";
+    gap: 16px;
+    width: 100%;
+}
+
+.navbar .hamburger {
+    display: none;
+}
+
+.navbar .hamburger:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+    .project-grid {
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "eth eth"
+            "eth eth"
+            "alphabet traveler "
+            "cube astro"
+            "insta insta"
+            "cup foam"
+            "dimensional dimensional";
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-grid {
+        margin-top: 100px;
+    }
+    .navbar {
+        padding: 16px 24px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: white;
+        width: 100%;
+    }
+
+    .navbar .right {
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        z-index: 2;
+    }
+    .project-grid {
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "eth eth"
+            "alphabet alphabet"
+            "traveler traveler"
+            "astro cube"
+            "insta insta"
+            "cup cup"
+            "foam foam"
+            "dimensional dimensional";
+    }
+    .project .overlay {
+        font-size: 24px;
+    }
+    .footer {
+        font-size: 14px;
+        padding: 32px;
+    }
+}
+
+.animatedBar1 {
+    animation: flipbar1 0.4s forwards;
+}
+
+.animatedBar2 {
+    animation: fadebar2 0.4s forwards;
+}
+
+.animatedBar3 {
+    animation: flipbar3 0.4s forwards;
+}
+
+@keyframes flipbar1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(45deg) translate(4px, 10px);
+    }
+}
+
+@keyframes fadebar2 {
+    from {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    to {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+@keyframes flipbar3 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-45deg) translate(4px, -10px);
+    }
+}
+
+#eth {
+    grid-area: eth;
+}
+
+#alphabet {
+    grid-area: alphabet;
+}
+
+#astro {
+    grid-area: astro;
+}
+
+#cube {
+    grid-area: cube;
+}
+
+#traveler {
+    grid-area: traveler;
+}
+
+#cup {
+    grid-area: cup;
+}
+
+#insta {
+    grid-area: insta;
+}
+
+#foam {
+    grid-area: foam;
+}
+
+#dimensional {
+    grid-area: dimensional;
+}
+

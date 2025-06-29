@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>demo-3-form-input</title>
+    </head>
+    <body>
+        <h1>Your Course Landing Page</h1>
+        <form action="/clp">
+            <div>
+                <label for="title">Course Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="description">Course Description</label>
+                <div>
+                    <textarea rows="10" cols="32" name="description"></textarea>
+                </div>
+            </div>
+            <div>
+                <label for="level">Skill Level</label>
+                <select name="level" id="level">
+                    <option value="beginner">Beginner Level</option>
+                    <option value="intermediate">Intermediate Level</option>
+                    <option value="expert">Expert Level</option>
+                    <option value="all">All Level</option>
+            </select>
+            </div>
+            <div>
+                <label for="publish">Ready to publish the course?</label>
+                <input type="checkbox" id="publish" name="publish">
+            </div>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

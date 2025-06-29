@@ -1,0 +1,256 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+/* Decorative Quotes
+============================================= */
+.container-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.decorativeQuotes p:first-child {
+    margin: 0 auto;
+    font-size: 4rem;
+}
+
+.blockquote {
+    margin-left: 32px;
+    font-size: 3rem;
+    font-style: italic;
+    width: 50%;
+    position: relative;
+}
+
+.blockquote::before {
+    content: open-quote;
+    top: -50px;
+    left: -50px;
+}
+
+.blockquote::after {
+    content: close-quote;
+    bottom: -80px;
+    right: 200px;
+}
+
+.blockquote::before, .blockquote::after {
+    font-size: 6rem;
+    position: absolute;
+}
+
+/* Gradient Borders
+============================================= */
+.container-2 {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    position: relative;
+    z-index: -2;
+}
+
+.gradientBorders .box {
+    background: black;
+    color: white;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.box::before {
+    content: "";
+    height: 306px;
+    width: 306px;
+    background: linear-gradient(cyan, magenta);
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    z-index: -1;
+}
+
+/* Animated Button
+============================================= */
+.animatedButtons {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: wheat;
+}
+
+.btn {
+    padding: 20px 40px;
+    text-transform: uppercase;
+    border: 2px solid #e91e63;
+    color: #e91e63;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden; 
+    transition: color 0.5s ease;
+    z-index: 1;
+}
+
+.animatedButtons .btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #e91e63;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.animatedButtons .btn:hover {
+    color: white;
+}
+
+.animatedButtons .btn:hover::before {
+    transform: translateX(0);
+}
+
+
+/* Animated Button
+============================================= */
+.container-4 {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animatedSpinner {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: conic-gradient(cyan, yellow, magenta, cyan);
+    box-shadow: inset 0px 0px 110px -70px black;
+    position: relative;
+    animation: 1.5s spin infinite linear;
+}
+
+.animatedSpinner::after {
+    content: "";
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0px 0px 110px -70px black;
+    border: 4px solid white;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* formControls
+============================================= */
+
+.formControls {
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.toggle {
+    opacity: 0;
+}
+
+.toggle + label {
+    padding-left: 5rem;
+    position: relative;
+}
+
+.toggle + label::before {
+    content: "";
+    background-color: #c6d0cc;
+    width: 4.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    position: absolute;
+    top: -0.55rem;
+    left: 0;
+    transition: background-color 0.2s;
+}
+
+.toggle + label::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -0.30rem;
+    left: 0.25rem;
+    transition: transform 0.2s;
+}
+
+.toggle:checked + label::before {
+    background-color: #20b776;
+}
+
+.toggle:checked + label::after {
+    transform: translateX(2rem);
+}
+
+/* Calc
+============================================= */
+
+.calc {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    flex-direction: column;
+}
+
+.outside-box {
+    width: 600px;
+    height: 600px;
+    background-color: cyan;
+    position: relative;
+    
+}
+
+.tiny-box {
+    width: 400px;
+    height: 300px;
+    background-color: pink;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Testing</title>
+    </head>
+    <body>
+        <h1>Form Control</h1>
+        <form action="https://www.google.com/search"> 
+            <input type="text" name="q" placeholder="To Search">
+            <button>Submit</button>
+        </form><br><br>
+        <form action="/signup"> 
+            <label for="username">Enter Your Username</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Enter Your Password</label>
+            <input type="password" name="password" id="password" required>
+            <button>Signup</button>
+        </form><br><br><br>
+        <h2>Select</h2>
+        <form action="/select"> 
+            <label for="animals">Select your favorite animals</label>
+            <select name="fav-animals" id="animals">
+                <option value="dogs">Dogs</option>
+                <option value="cats">Cats</option>
+                <option value="birds">Birds</option>
+                <option value="lions">Lions</option>
+                <option value="tigers">Tigers</option>
+            </select>
+            <button>Submit</button>
+        </form><br><br><br>
+        <form action=""> 
+            <label for="checkbox">Checkbox</label>
+            <input type="checkbox" name="checkbox" id="checkbox"><br>
+            <label for="color">Enter Your Color</label>
+            <input type="color" name="color" id="color"><br>
+            <label for="button">Button</label>
+            <input type="button" name="button" id="button"><br>
+            <label for="date">date</label>
+            <input type="date" name="date" id="date"><br>
+            <label for="datetime-local">datetime-local</label>
+            <input type="datetime-local" name="datetime-local" id="datetime-local"><br>
+            <label for="email">email</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="file">file</label>
+            <input type="file" name="file" id="file"><br>
+            <label for="hidden">hidden</label>
+            <input type="hidden" name="hidden" id="hidden"><br>
+            <label for="image">image</label>
+            <input type="image" name="image" id="image"><br>
+            <label for="month">month</label>
+            <input type="month" name="month" id="month"><br>
+            <label for="number">number</label>
+            <input type="number" name="number" id="number"><br>
+            <label for="radio">radio</label>
+            <input type="radio" name="radio" id="radio"><br>
+            <label for="range">range</label>
+            <input type="range" id="range" min="0" max="10" name="volumelevel"><br>
+            <label for="reset">reset</label>
+            <input type="reset" name="reset" id="reset"><br>
+            <label for="search">search</label>
+            <input type="search" name="search" id="search"><br>
+            <label for="submit">submit</label>
+            <input type="submit" name="submit" id="submit"><br>
+            <label for="tel">tel</label>
+            <input type="tel" name="tel" id="tel"><br>
+            <label for="time">time</label>
+            <input type="time" name="time" id="time"><br>
+            <label for="url">url</label>
+            <input type="url" name="url" id="url"><br>
+            <label for="week">week</label>
+            <input type="week" name="week" id="week"><br>
+            <label for="datetime">datetime</label>
+            <input type="datetime" name="datetime" id="datetime"><br>
+            <textarea rows="10" cols="50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, sunt velit cumque dolorem vel eveniet ut expedita, mollitia soluta esse modi suscipit. Delectus odit, in quam accusamus unde quibusdam repellendus?</textarea><br>
+            <button>Click me!</button>
+        </form>
+    </body>
+</html>

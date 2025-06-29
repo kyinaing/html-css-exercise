@@ -1,0 +1,27 @@
+p {
+    color: rgb(11, 228, 177);
+}
+
+h1 {
+    font-size: 60px;
+    color: aquamarine;
+    letter-spacing: 10px;
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    text-shadow: 5px 5px 0px red, 10px 10px 0px blue, 15px 15px 0px green, 20px 20px 0px pink;
+    
+}
+
+
+a {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blueviolet;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,63 @@
+/*  
+Style the container div 
+  - 6 columns, each 1 fraction.  USE REPEAT!
+  - 4 rows, each 100 pixels.  USE REPEAT!
+  - 10px gaps between rows and columns
+*/
+
+.container {
+    display: grid;
+    grid-template: repeat(5, 100px) / repeat(6, 1fr);
+    grid-auto-flow: column;
+    gap: 10px;
+    grid-auto-rows: 100px;
+}
+
+.thing {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* .first {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.second {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.third {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.fourth {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.fifth {
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    grid-row-start: 4;
+    grid-row-end: span 1;
+}
+
+.sixth {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.seventh {
+    grid-area: 5 / 2 / 6 / 4;
+} */
